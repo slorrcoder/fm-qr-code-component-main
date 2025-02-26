@@ -9,13 +9,62 @@
   --slate-300: hsl(212, 45%, 89%);
   --white: hsl(0, 0%, 100%);
 
-  --spacing-500: ;
+  --spacing-500: 2.5rem; /* 40px */
+  --spacing-300: 1.5rem; /* 24px */
+  --spacing-200: 1rem; /* 16px */
 }
 
-.attribution {
-  font-size: 11px;
+body {
+  min-height: 100vh;
+  background-color: var(--slate-300);
+  font-family: "Outfit", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  max-width: 320px;
+  margin: var(--spacing-300);
+  background-color: var(--white);
+  border-radius: 1.25rem;
+  padding: var(--spacing-200) var(--spacing-200) var(--spacing-500)
+    var(--spacing-200);
+}
+
+.card__img {
+    border-radius: 0.625rem;
+}
+
+.card__text {
+  margin-top: var(--spacing-300);
+  padding-inline: var(--spacing-200);
   text-align: center;
 }
+
+.card__h1 {
+  color: var(--slate-900);
+  font-size: clamp(1rem, 6vw, 1.375rem);
+  line-height: 1.2;
+}
+
+.card__p {
+  margin-top: var(--spacing-200);
+  color: var(--slate-500);
+  font-size: clamp(0.875rem, 6vw, 0.938rem);
+  line-height: 1.4;
+  letter-spacing: 0.2px;
+}
+
+/* --- # ATTRIBUTION --- */
+
+.attribution {
+  font-size: 0.688rem;
+  text-align: center;
+  color: var(--slate-500);
+}
+
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: var(--slate-900);
 }
